@@ -26,8 +26,8 @@ li {
   list-style: none;
 }
 .container {
-  max-width: 1120px;
-  padding: 0 10px;
+  max-width: 1140px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .header {
@@ -286,4 +286,45 @@ li {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+}
+.menu-mobile__btn {
+  background-color: transparent;
+  border: none;
+}
+.menu-mobile {
+  background-color: #242b33;
+  height: 100vh;
+  width: 50%;
+  width: 50%;
+  position: absolute;
+  left: -100%;
+  font-size: 20px;
+  padding-top: 50px;
+}
+.menu-mobile li {
+  margin-bottom: 25px;
+}
+@media (max-width: 750px) {
+  .menu__list {
+    display: none;
+  }
+  .menu-mobile__btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 40px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 50;
+  }
+  .menu-mobile__btn span {
+    position: absolute;
+    background-color: #fff;
+    transition: all 0.5s;
+    height: 2px;
+    width: 100%;
+  }
+  .menu-mobile__btn span:nth-child(1) {
+    top: 0;
+  }
 }
