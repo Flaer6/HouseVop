@@ -1,4 +1,5 @@
 title-font = 'Playfair Display', serif
+text-font = 'Roboto', sans-serif
 title-color = #D4C17F
 
 *
@@ -29,14 +30,15 @@ li
   list-style none
 
 .container
-  max-width 1120px
-  padding 0 10px
+  max-width 1140px
+  padding 0 20px
   margin 0 auto
 
 .header
   position absolute
   left 0
   right 0
+  z-index 1
 
 .menu
   display flex
@@ -93,14 +95,198 @@ li
   text-align center
   gap 0 100px
   font-size 18px
+  padding-bottom 75px
 
 .promo__conacts img
   margin-right 18px
 
+.complexes__inner
+  text-align center
+  padding-top 120px
+  position relative
+  
+.numbg-right
+  position absolute
+  top 200px
+  right -150px
+  font-family title-font
+  font-size 400px
+  opacity 0.02
 
+.complexes__list
+  display flex
+  justify-content space-between
+  justify-content center
+  align-items center
+  gap 0 70px
+  max-width 800px
+  margin 0 auto
 
+.complexes__item p
+  padding-top 53px
+  font-family text-font
+  font-size 20px
+  line-height 27px
+  
+.houses__inner
+  padding-top 120px
+  position relative
+  
+.numbg-left
+  position absolute
+  top 350px
+  left -220px
+  font-family title-font
+  font-size 400px
+  opacity 0.02
+  
+.houses__title
+  font-family title-font
+  font-size 36px
+  line-height 48px
+  color title-color
 
+.houses__gallery
+  display grid
+  grid-template-columns 1fr 1fr
+  gap 30px
 
+.houses__gallery-item p
+  font-size 24px
+  display flex
+  align-items flex-end
+  padding 50px
+  
+.houses__gallery-item
+  min-height 320px
+  display flex
+  
+.houses__gallery-item:nth-child(1),
+.houses__gallery-item:nth-child(3)
+  background-image url("../images/Rectangle-1.jpg")
+  background-position center
+  background-size cover
+  background-repeat no-repeat
 
+.houses__gallery-item:nth-child(2),
+.houses__gallery-item:nth-child(4)
+  background-image url("../images/Rectangle-2.jpg")
+  background-position center
+  background-size cover
+  background-repeat no-repeat
 
-//font-family: 'Roboto', sans-serif;
+.view
+  background-image url("../images/view-bg.jpg")
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+
+.view__inner
+  padding 180px 0
+  display flex
+  justify-content space-between
+  align-items center
+
+.left-title
+  font-family title-font
+  font-size 36px
+  color title-color
+  margin 0
+  margin-bottom 50px
+
+.view__left-text
+  font-size 16px
+  line-height 24px
+  
+.view__right
+  display grid
+  grid-template-columns 1fr 1fr
+  gap 35px 30px
+  margin-top 100px
+  margin-left 35px
+  
+.right-input
+  border none
+  border-radius 0
+  padding 12px 50px
+  background-color #fff
+  opacity 0.2
+  
+.right-input::placeholder
+  color #BEBEBE
+  text-align center
+
+.right-btn
+  border none 
+  border-radius none
+  padding 12px 54px
+  font-size 16px
+  color #fff
+  background-color title-color
+
+.video__inner 
+  position relative
+  text-align center
+  
+.video__inner + img
+  width 720px
+  height 650px
+  
+.video__inner img + img
+  position absolute
+  top 275px
+  left 500px
+  
+.map
+  padding-top 180px
+
+.map__inner
+  position relative
+
+.map__inner .numbg-left
+  top 160px
+  left -150px
+
+.map__title
+  font-family title-font
+  font-size 26px
+  color title-color
+  margin-bottom 100px
+
+#map 
+  height 358px
+  width 1110px
+  background-color #626262
+
+.form 
+  padding 180px 0
+  
+.form__item
+  display flex
+  justify-content space-between
+  align-items center
+  gap 20px
+  
+.form__item input
+  padding 12px 40px
+
+.form__item button
+  padding 12px 50px
+  
+.footer
+  background-color #2D343C
+  padding 70px 0
+  
+.foote__inner
+  display flex
+  justify-content space-between
+  align-items center
+  
+.footer__nav-list li
+  letter-spacing 5%
+  margin-top 15px
+  
+.footer__nav-social
+  display flex
+  justify-content space-between
+  margin-top 30px
