@@ -16,56 +16,61 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="menu">
-          <div class="logo">
-            <h1 class="logo__title">HouseVOP</h1>
-            <p class="logo__subtitle">ЖИЛОЙ КОМПЛЕКС</p>
-          </div>
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="#" class="menu__link"> О комплексе </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link"> Район </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link"> Каталог квартир </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link"> Ипотека </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link"> Контакты </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="menu-mobile">
+        <div class="header__inner">
+          <nav class="menu">
+            <div class="logo">
+              <h1 class="logo__title">HouseVOP</h1>
+              <p class="logo__subtitle">ЖИЛОЙ КОМПЛЕКС</p>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#complexes" class="menu__link"> О комплексе </a>
+              </li>
+              <li class="menu__item">
+                <a href="#rayon" class="menu__link"> Район </a>
+              </li>
+              <li class="menu__item">
+                <a href="#houses" class="menu__link"> Каталог квартир </a>
+              </li>
+              <li class="menu__item">
+                <a href="#ipoteka" class="menu__link"> Ипотека </a>
+              </li>
+              <li class="menu__item">
+                <a href="#footer" class="menu__link"> Контакты </a>
+              </li>
+            </ul>
+          </nav>
+
           <button class="menu-mobile__btn">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <ul class="menu-mobile__list">
-            <li class="menu__item">
-              <a href="#" class="menu__link"> О комплексе </a>
-            </li>
-            <li>
-              <a href="#"> Район </a>
-            </li>
-            <li>
-              <a href="#"> Каталог квартир </a>
-            </li>
-            <li>
-              <a href="#"> Ипотека </a>
-            </li>
-            <li>
-              <a href="#"> Контакты </a>
-            </li>
-          </ul>
+
+          <nav class="menu-mobile">
+            <ul class="menu-mobile__list">
+              <li class="menu__item">
+                <a href="#complexes" class="menu__link"> О комплексе </a>
+              </li>
+              <li>
+                <a href="#rayon"> Район </a>
+              </li>
+              <li>
+                <a href="#houses"> Каталог квартир </a>
+              </li>
+              <li>
+                <a href="#ipoteka"> Ипотека </a>
+              </li>
+              <li>
+                <a href="#footer"> Контакты </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
+
     <main class="main">
       <section class="promo">
         <div class="container">
@@ -93,7 +98,8 @@
           </div>
         </div>
       </section>
-      <section class="complexes">
+
+      <section class="complexes" id="complexes">
         <div class="container">
           <div class="complexes__inner">
             <span class="numbg-right">II</span>
@@ -118,7 +124,8 @@
           </div>
         </div>
       </section>
-      <section class="houses">
+
+      <section class="houses" id="houses">
         <div class="container">
           <div class="houses__inner">
             <span class="numbg-left">III</span>
@@ -140,7 +147,8 @@
           </div>
         </div>
       </section>
-      <section class="view">
+
+      <section class="view" id="ipoteka">
         <div class="container">
           <div class="view__inner">
             <div class="view__left">
@@ -153,60 +161,80 @@
                 шрифтов, используя Lorem Ipsum для распечатки образцов.
               </p>
             </div>
-            <div class="view__right">
-              <input class="right-input" type="text" placeholder="Ваше имя" />
+            <form class="view__right" method="get" action="#">
               <input
                 class="right-input"
-                type="number"
+                type="text"
+                name="name"
+                value=""
+                placeholder="Ваше имя"
+              />
+              <input
+                class="right-input"
+                type="tel"
+                name="name"
+                value=""
                 placeholder="Ваш телефон"
               />
               <span>
                 *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
                 базу.
               </span>
-              <button class="right-btn">Посмотреть район</button>
-            </div>
+              <button class="right-btn" type="submit">Посмотреть район</button>
+            </form>
           </div>
         </div>
       </section>
+
       <section class="video">
         <div class="container">
           <div class="video__inner">
             <span class="numbg-right">IV</span>
-            <img src="images/video.jpg" alt="video" />
-            <img src="images/play.svg" alt="" />
+            <img class="video__img" src="images/video.jpg" alt="video" />
           </div>
         </div>
       </section>
-      <section class="map">
+
+      <section class="map" id="rayon">
         <div class="container">
           <div class="map__inner">
             <span class="numbg-left">V</span>
             <h5 class="map__title">Район на карте</h5>
             <div id="map"></div>
-            <div class="form">
+            <form class="form" method="get" action="#">
               <h5 class="left-title">Есть вопросы?</h5>
               <div class="form__item">
                 <span>
                   *Мы никому не передаем ваши данные. <br />
                   И не сохраняем ваш номер в базу.
                 </span>
-                <input class="right-input" type="text" placeholder="Ваше имя" />
                 <input
                   class="right-input"
-                  type="number"
+                  type="text"
+                  name="name"
+                  value=""
+                  placeholder="Ваше имя"
+                />
+                <input
+                  class="right-input"
+                  type="tel"
+                  name="name"
+                  value=""
                   placeholder="Ваш телефон"
                 />
-                <button class="right-btn">Посмотреть район</button>
+                <button class="right-btn" type="submit">
+                  Посмотреть район
+                </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
-          </main>
-          <footer class="footer">
+    </main>
+
+    <footer class="footer" id="footer">
       <div class="container">
-        <div class="foote__inner">
+        <div class="footer__inner">
           <div class="logo">
             <h1 class="logo__title">HouseVOP</h1>
             <p class="logo__subtitle">ЖИЛОЙ КОМПЛЕКС</p>
@@ -214,38 +242,38 @@
           <div class="footer__nav">
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a href="#"> О комплексе </a>
+                <a href="#complexes"> О комплексе </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Район </a>
+                <a href="#rayon"> Район </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Каталог квартир </a>
+                <a href="#houses"> Каталог квартир </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Ипотека </a>
+                <a href="#ipoteka"> Ипотека </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Контакты </a>
+                <a href="#footer"> Контакты </a>
               </li>
             </ul>
           </div>
           <div class="footer__nav">
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a href="#"> О комплексе </a>
+                <a href="#complexes"> О комплексе </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Район </a>
+                <a href="#rayon"> Район </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Каталог квартир </a>
+                <a href="#houses"> Каталог квартир </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Ипотека </a>
+                <a href="#ipoteka"> Ипотека </a>
               </li>
               <li class="footer__nav-item">
-                <a href="#"> Контакты </a>
+                <a href="#footer"> Контакты </a>
               </li>
             </ul>
           </div>
@@ -283,10 +311,13 @@
       </div>
     </footer>
 
+
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
-    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script language="YoptaScript" src="js/main.yopta"></script>
+    <script src="js/yopta.js"></script>
   </body>
 </html>

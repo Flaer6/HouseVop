@@ -2,10 +2,14 @@ title-font = 'Playfair Display', serif
 text-font = 'Roboto', sans-serif
 title-color = #D4C17F
 
+html
+  box-sizing border-box
+  scroll-behavior smooth
+
 *
 *::before
 *::after
-  box-sizing border-box
+  box-sizing inherit
 
 @font-face
   font-family PostNoBillsJaffna-Bold
@@ -107,21 +111,21 @@ li
   
 .numbg-right
   position absolute
-  top 200px
-  right -150px
+  top 0px
+  right 0px
   font-family title-font
   font-size 400px
+  line-height 1
   opacity 0.02
 
 .complexes__list
-  display flex
-  justify-content space-between
-  justify-content center
-  align-items center
+  position relative
+  display grid
+  grid-template-columns repeat(4, 1fr)
   gap 0 70px
   max-width 800px
   margin 0 auto
-
+  
 .complexes__item p
   padding-top 53px
   font-family text-font
@@ -190,6 +194,8 @@ li
 .left-title
   font-family title-font
   font-size 36px
+  line-height 1
+  line-height 1
   color title-color
   margin 0
   margin-bottom 50px
@@ -228,15 +234,9 @@ li
   position relative
   text-align center
   
-.video__inner + img
-  width 720px
-  height 650px
-  
-.video__inner img + img
-  position absolute
-  top 275px
-  left 500px
-  
+.video__img
+  max-width 100%
+
 .map
   padding-top 180px
 
@@ -255,7 +255,7 @@ li
 
 #map 
   height 358px
-  width 1110px
+  min-width 1px
   background-color #626262
 
 .form 
@@ -263,7 +263,6 @@ li
   
 .form__item
   display flex
-  justify-content space-between
   align-items center
   gap 20px
   
@@ -277,7 +276,7 @@ li
   background-color #2D343C
   padding 70px 0
   
-.foote__inner
+.footer__inner
   display flex
   justify-content space-between
   align-items center
@@ -296,19 +295,46 @@ li
   border none
 
 .menu-mobile
-  background-color #242B33
-  height 100vh
-  width 50%
-  width 50%
   position absolute
-  left -100%
+  top 0
+  bottom 0
+  right 0
+  background-color #242B33
+  min-height 100vh
+  width 50%
+  transform translateY(-100%)
+  transition all .5s
   font-size 20px
   padding-top 50px
   
 .menu-mobile li
-  margin-bottom 25px
+  margin-bottom 50px
+
+@media (max-width 1130px)
+  .form__item
+    flex-direction column
+    min-width 100%
+
+@media (max-width 1060px)
+  .view__inner
+    flex-direction column
+  .view__right
+    margin-top 40px
+    margin-left 0
+
+@media (max-width 800px)
+  .complexes__list
+    grid-template-columns 1fr 1fr
+    gap 70px
   
+  .footer__nav:nth-child(2)
+    display none
+
 @media (max-width 750px)
+  .header__inner
+    display flex
+    justify-content space-between
+    align-items center
   .menu__list
     display none
   .menu-mobile__btn
@@ -319,6 +345,7 @@ li
     width 50px
     cursor pointer
     z-index 50
+    margin 20px 0 50px
   .menu-mobile__btn span
    position absolute
    background-color #fff
@@ -327,3 +354,46 @@ li
    width 100%
   .menu-mobile__btn span:nth-child(1)
    top 0
+  .menu-mobile__btn span:nth-child(2)
+   top 15px
+  .menu-mobile__btn span:nth-child(3)
+   top 15px
+  .menu-mobile__btn span:nth-child(4)
+   top 30px
+
+  .menu-mobile__btn.btn--click span:nth-child(1)
+   transform scaleX(0)
+  .menu-mobile__btn.btn--click span:nth-child(2)
+   transform rotate(45deg)
+  .menu-mobile__btn.btn--click span:nth-child(3)
+   transform rotate(-45deg)
+  .menu-mobile__btn.btn--click span:nth-child(4)
+   transform scaleX(0)
+  .menu-mobile.menu--open
+    transform translateY(0)
+
+  .houses__gallery
+    grid-template-columns 1fr
+    gap 50px 0
+
+  .view__right
+    grid-template-columns 1fr
+    gap 20px 0
+  
+  .footer .logo 
+    display none
+
+@media (max-width 600px)
+  .promo__title
+    font-size 40px
+  .promo__conacts 
+    flex-direction column
+    gap 0 40px
+  .complexes__list
+    grid-template-columns 1fr
+
+@media (max-width 450px) 
+  .footer__inner
+    flex-direction column
+  .footer__nav
+    margin-bottom 30px

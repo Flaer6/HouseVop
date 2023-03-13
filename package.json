@@ -1,5 +1,22 @@
 {
-  "dependencies": {
+  "name": "housevop",
+  "version": "1.0.0",
+  "description": "WebSite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flaer6/HouseVop.git"
+  },
+  "author": "Victor (Flaer)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flaer6/HouseVop/issues"
+  },
+  "homepage": "https://github.com/Flaer6/HouseVop#readme",
+  "devDependencies": {
     "yopta": "^2.0.4"
   }
 }
